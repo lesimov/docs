@@ -26,6 +26,15 @@
     "tabs": [
       {
         "tab": "Guides",
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Blog for Mechanic",
+              "icon": "newspaper",
+              "href": "https://dusadev.net/touch"
+            }
+          ]
+        },
         "groups": [
           {
             "group": "Getting started",
@@ -62,7 +71,17 @@
           {
             "group": "Mechanic",
             "pages": [
-              "index-copied-1"
+              "index-copied-1",
+              "installation",
+              "commands",
+              {
+                "group": "API",
+                "pages": [
+                  "events",
+                  "exports",
+                  "callbacks"
+                ]
+              }
             ]
           }
         ]

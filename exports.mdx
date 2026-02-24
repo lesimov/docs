@@ -1,0 +1,54 @@
+---
+title: "Exports"
+---
+
+---
+
+## Client Exports
+
+### Show / Hide Text UI
+
+1. **Showing Text UI**
+
+   ```lua lines wrap
+   exports.dusa_bridge:ShowTextUI(locale('zones.tuning.prompt'), {
+       position = 'right-center',
+       key = 'E',
+   })
+   ```
+2. **Hiding Text UI**
+
+   ```lua lines wrap
+   exports.dusa_bridge:HideTextUI()
+   ```
+
+### isNitroActive
+
+```lua lines wrap
+local ret = exports.dusa_mechanic:isNitroActive() -- ret: true | false                      
+```
+
+---
+
+## Server Exports
+
+### GetVehicleOrderStatus
+
+```lua
+local ret = exports.dusa_mechanic:GetVehicleOrderStatus(vehicleNetId)
+  -- ret: 'pending' | 'in_progress' | 'completed' | nil
+```
+
+### GetVehicleOrderStatuses
+
+```lua
+local ret = exports.dusa_mechanic:GetVehicleOrderStatuses()
+  -- ret: { [netId] = 'pending', [netId2] = 'completed', ... }
+```
+
+### IsVehicleInAssembly
+
+```lua
+local ret = exports.dusa_mechanic:IsVehicleInAssembly(vehicleNetId)
+  -- ret: true | false
+```

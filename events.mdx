@@ -1,0 +1,59 @@
+---
+title: "Events"
+---
+
+## Client
+
+### **Opening Tuning Menu**
+
+**Parameters **
+
+| mechanicId                                        | zoneId                                       |
+| ------------------------------------------------- | -------------------------------------------- |
+| Mechanic id from ds_mechanic_zones shop_id column | Mechanic id from ds_mechanic_zones id column |
+
+**Event**
+
+```lua client.lua expandable lines wrap
+TriggerEvent('mechanic:tuning:open', mechanicId, zoneId)
+```
+
+### Opening Redline App
+
+**Parameters**
+
+No parameters required.
+
+**Event**
+
+```lua client.lua expandable lines wrap
+TriggerEvent('dusa_mechanic:openStandaloneRedline')
+```
+
+### Opening Tablet (Requires [dusa_tablet](https://dusadev.net/scripts/7223228) package)
+
+**Parameters**
+
+No parameters required.
+
+**Event**
+
+```lua client.lua expandable lines wrap
+TriggerEvent('dusa_tablet:openFromItem')
+```
+
+### Opening Mechanic Admin Editor
+
+**Parameters**
+
+No parameters required.
+
+**Event**
+
+```lua client.lua expandable lines wrap
+TriggerEvent('mechanic:admin:openUI')
+```
+
+<Warning>
+  This event opens admin special menu. We already added extra security steps but we suggest you to add extra security steps for your code too before triggering this event. 
+</Warning>
